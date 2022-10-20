@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Smile from './IMG/Smile.svg'
+import Angel from './IMG/Angel.svg'
+import './CSS/App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>There is some issue </h1>
+        <img src={Smile} alt="smile" />
       </header>
+
+      <div className="content">
+        <p className="testo">
+          <b>Codewithrandom</b> Hope you understand our pain <br /> as our
+          developer
+          <img className="angel" src={Angel} alt="angel" /> thank you visit
+          again
+        </p>
+
+        <div className="numbers">
+          <div className="primo">4</div>
+          <div className="secondo">0</div>
+          <div className="terzo">4</div>
+        </div>
+      </div>
+
+      <footer>
+        <button>
+          <a href="#">Visit the Homepage</a>
+        </button>
+      </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
