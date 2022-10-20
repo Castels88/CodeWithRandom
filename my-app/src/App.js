@@ -1,35 +1,13 @@
-import Smile from './IMG/Smile.svg'
-import Angel from './IMG/Angel.svg'
-import './CSS/App.css'
-
-function App() {
+import { Link, Route, Routes } from 'react-router-dom'
+import NotFound from '../src/Componets/NotFound'
+export function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>There is some issue </h1>
-        <img src={Smile} alt="smile" />
-      </header>
-
-      <div className="content">
-        <p className="testo">
-          <b>Codewithrandom</b> Hope you understand our pain <br /> as our
-          developer
-          <img className="angel" src={Angel} alt="angel" /> thank you visit
-          again
-        </p>
-
-        <div className="numbers">
-          <div className="primo">4</div>
-          <div className="secondo">0</div>
-          <div className="terzo">4</div>
-        </div>
-      </div>
-
-      <footer>
-        <button>
-          <a href="#">Visit the Homepage</a>
-        </button>
-      </footer>
+    <div>
+      <h1>My Exercize app</h1>
+      <Link to="/notfound">Esercizio Not Found</Link>
+      <Routes>
+        <Route path="/:notFound" element={<NotFound />} />
+      </Routes>
     </div>
   )
 }
