@@ -2,7 +2,7 @@
 import Smile from '../IMG/Smile.svg'
 import Angel from '../IMG/Angel.svg'
 import '../CSS/App.css'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Notfound() {
   const navigate = useNavigate()

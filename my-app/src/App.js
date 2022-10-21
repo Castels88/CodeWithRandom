@@ -5,9 +5,8 @@ export function App() {
     <div className="container">
       <h1>My Exercize app</h1>
       <nav>
-        <Link to="/notfound">Esercizio Not Found</Link>
+        <Link to="/">Home</Link> <Link to="/notfound">Esercizio Not Found</Link>
       </nav>
-
       <Routes>
         <Route path="/:notFound" element={<NotFound />} />
       </Routes>
