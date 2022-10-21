@@ -1,0 +1,42 @@
+.SocialContainer{
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+
+.box:hover{
+    width: 80px;
+    height: 80px;
+    background: #c32aa3;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 50px #b315917c;
+    transition: all .4s;
+
+}
+.box:nth-child(2):hover{
+    width: 80px;
+    background: #1877f2;
+    box-shadow: 0 0 50px #1876f285;
+}
+
+.box:nth-child(3):hover{
+    width: 80px;
+    background: #1da1f2;
+    box-shadow: 0 0 50px #1da0f280;
+}
+.box:nth-child(4):hover{
+    width: 80px;
+    background: #25d366;
+    box-shadow: 0 0 50px #25d3657e;
+}
+

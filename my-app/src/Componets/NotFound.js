@@ -3,6 +3,8 @@ import Smile from '../IMG/Smile.svg'
 import Angel from '../IMG/Angel.svg'
 import '../CSS/App.css'
 import { useNavigate } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Notfound() {
   const navigate = useNavigate()
@@ -14,7 +16,7 @@ export default function Notfound() {
   return (
     <div className="App">
       <header>
-        <h1>There is some issue </h1>
+        <h1>There is some issue</h1>
         <img src={Smile} alt="smile" />
       </header>
 
@@ -34,9 +36,9 @@ export default function Notfound() {
       </div>
 
       <footer>
-        <button onClick={handleButton}>
+        <Button onClick={handleButton}>
           <p>Back to Homepage</p>
-        </button>
+        </Button>
       </footer>
     </div>
   )

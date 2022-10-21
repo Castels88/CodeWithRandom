@@ -75,11 +75,7 @@ footer{
   align-items: center;
   justify-content: center;
 }
-button{
-  background: grey;
-  width: 300px;
-  height: 100px;
-}
+
 a{
   color: rgb(36, 40, 150);
   text-decoration: none;
