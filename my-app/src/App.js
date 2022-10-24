@@ -3,6 +3,7 @@ import NotFound from '../src/Componets/NotFound'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Alert } from 'react-bootstrap'
 import { IconHover } from './Componets/IconHover'
+import { Footer } from './Componets/Footer'
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
       <Routes>
         <Route path="/:notFound" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

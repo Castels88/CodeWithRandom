@@ -10,6 +10,8 @@
     align-items: center;
     cursor: pointer;
     transition: all .4s;
+    margin-top: 5px;
+
 }
 
 
@@ -21,22 +23,32 @@
     color: white;
     box-shadow: 0 0 50px #b315917c;
     transition: all .4s;
+    margin-top: 2px;
 
 }
 .box:nth-child(2):hover{
     width: 80px;
     background: #1877f2;
     box-shadow: 0 0 50px #1876f285;
+    margin-top: 2px;
+
 }
 
 .box:nth-child(3):hover{
     width: 80px;
     background: #1da1f2;
     box-shadow: 0 0 50px #1da0f280;
+    margin-top: 2px;
+
 }
 .box:nth-child(4):hover{
     width: 80px;
     background: #25d366;
     box-shadow: 0 0 50px #25d3657e;
+    margin-top: 2px;
+
+}
+img{
+    margin: 5px;
 }
 
