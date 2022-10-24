@@ -2,26 +2,15 @@ import '../CSS/Timer.css'
 import Button from 'react-bootstrap/Button'
 import { useEffect, useState } from 'react'
 
-export function Timer({ inizialValue = 0 }) {
-  const [hour, setHour] = useState(inizialValue)
-  const [min, setMin] = useState(inizialValue)
-  const [sec, setSec] = useState(inizialValue)
-
-  //   useEffect(() => {
-  //     if (() => 0) {
-  //       setTimeout(() => setSec(sec + 1), 1000)
-  //     }
-  //   }, [sec])
+export function Timer() {
+  const [hour, setHour] = useState(0)
+  const [min, setMin] = useState(0)
+  const [sec, setSec] = useState(0)
 
   function resetCounter() {
-    setSec(inizialValue)
-    setMin(inizialValue)
-    setHour(inizialValue)
-  }
-  function PauseCounter() {
-    clearInterval(setSec)
-    clearInterval(setMin)
-    clearInterval(setHour)
+    setSec(0)
+    setMin(0)
+    setHour(0)
   }
 
   return (
@@ -33,7 +22,7 @@ export function Timer({ inizialValue = 0 }) {
         <Button className="m-2" variant="success">
           Start
         </Button>
-        <Button onClick={PauseCounter} className="m-2" variant="warning">
+        <Button className="m-2" variant="warning">
           Pause Timer
         </Button>
       </div>
