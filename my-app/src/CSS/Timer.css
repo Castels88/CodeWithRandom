@@ -1,0 +1,28 @@
+.T-container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.time{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hour{
+    font-size: 100px;
+    margin: 0.5rem;
+}
+.minute{
+    font-size: 100px;
+    margin: 0.5rem;
+
+}
+.sec{
+    font-size: 100px;
+    margin: 0.5rem;
+
+}
