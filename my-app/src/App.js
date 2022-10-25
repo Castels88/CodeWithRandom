@@ -5,7 +5,8 @@ import { Alert } from 'react-bootstrap'
 import { IconHover } from './Componets/IconHover'
 import { Footer } from './Componets/Footer'
 import { LoginForm } from './Componets/LoginForm'
-import { Timer } from './Componets/Timer'
+import { MyStopwatch } from './Componets/MyStopwatch'
+import { Pokemon } from './Componets/Pokermon'
 
 export function App() {
   return (
@@ -13,14 +14,16 @@ export function App() {
       <Alert variant="success">My Exercize app</Alert>
       <nav>
         <Link to="/">Home</Link> <Link to="/notfound">Esercizio Not Found</Link>
-        <Link to="/login">Login</Link>
+        <Link to="/login">Login</Link> <Link to="/timer">Timer</Link>
+        <Link to="/pokemon">Pokemon</Link>
         <IconHover />
       </nav>
       <Routes>
-        <Route path="/:notFound" element={<NotFound />} />
+        <Route path="/notFound" element={<NotFound />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/timer" element={<MyStopwatch />} />
+        <Route path="/pokemon" element={<Pokemon />} />
       </Routes>
-      <Timer />
       <Footer />
     </div>
   )
