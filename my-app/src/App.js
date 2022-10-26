@@ -3,7 +3,6 @@ import NotFound from '../src/Componets/NotFound'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Alert } from 'react-bootstrap'
 import { IconHover } from './Componets/IconHover'
-import { Footer } from './Componets/Footer'
 import { LoginForm } from './Componets/LoginForm'
 import { MyStopwatch } from './Componets/MyStopwatch'
 import { Pokemon } from './Componets/Pokermon'
@@ -24,7 +23,6 @@ export function App() {
         <Route path="/timer" element={<MyStopwatch />} />
         <Route path="/pokemon" element={<Pokemon />} />
       </Routes>
-      <Footer />
     </div>
   )
 }

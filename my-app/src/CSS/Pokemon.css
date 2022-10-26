@@ -1,6 +1,46 @@
-.poke-container{
+.poke-body{
+    margin-top: 20px;
     width: 100%;
     height: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;    
+}
+.poke-container-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.poke-card{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    margin: 5px;
     
-
+}
+.card-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    
+}
+.poke-info{
+    width: 100%;
+    height: 100%;
+    margin: 2px;
+    display: flex;
+    word-wrap: break-word;
+}
+a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: yellow;
+    
 }
