@@ -12,9 +12,6 @@ export function Pokemon() {
     })
   }, [])
 
-  function handleData() {
-    console.log(value.map((item) => item))
-  }
   function handleInput(event) {
     setSearch(event.target.value)
   }
@@ -28,7 +25,7 @@ export function Pokemon() {
         id="search"
         placeholder="search your pokemon"
       />
-      <button onClick={handleData}>fetch</button>
+      <div>Non ho trovato un' API con le immagini </div>
       <div className="poke-container-card">
         {value &&
           value
