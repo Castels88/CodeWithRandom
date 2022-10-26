@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import '../CSS/Pokemon.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -5,15 +6,27 @@ import axios from 'axios'
 export function Pokemon() {
   const [search, setSearch] = useState('')
   const [value, setValue] = useState([])
+  const [img, setImg] = useState([])
 
   useEffect(() => {
     axios.get('https://pokeapi.co/api/v2/pokemon/').then((response) => {
       setValue(response.data.results)
+
+      value.map((item) => {
+        console.log(item.url)
+        axios.get(item.url).then((response) => {
+          img.push(response.data)
+        })
+        console.log(img)
+      })
     })
-  }, [])
+  }, [img])
 
   function handleInput(event) {
     setSearch(event.target.value)
+  }
+  function handleFetch() {
+    console.log(value.map((item) => item.url))
   }
 
   return (
@@ -25,7 +38,7 @@ export function Pokemon() {
         id="search"
         placeholder="search your pokemon"
       />
-      <div>Non ho trovato un' API con le immagini </div>
+      <button onClick={handleFetch}>fetch</button>
       <div className="poke-container-card">
         {value &&
           value
@@ -38,11 +51,11 @@ export function Pokemon() {
                 return item
               }
             })
-            .map((item) => (
-              <div className="poke-card">
-                <div className="card-header">{item.name}</div>
+            .map((item, index) => (
+              <div key={index} className="poke-card">
+                <div className="card-header">{value[index].name}</div>
                 <div className="poke-info">
-                  <a href="/">{item.url}</a>
+                  {/* {<img src={img[index]} alt="/" />} */}
                 </div>
               </div>
             ))}

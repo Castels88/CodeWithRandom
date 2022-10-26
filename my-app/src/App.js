@@ -12,7 +12,7 @@ export function App() {
     <div className="container_body">
       <Alert variant="success">My Exercize app</Alert>
       <nav>
-        <Link to="/">Home</Link> <Link to="/notfound">Esercizio Not Found</Link>
+        <Link to="/">Home</Link> <Link to="/notfound">Not Found</Link>
         <Link to="/login">Login</Link> <Link to="/timer">Timer</Link>
         <Link to="/pokemon">Pokemon</Link>
         <IconHover />
