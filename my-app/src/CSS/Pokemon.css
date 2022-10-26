@@ -15,7 +15,7 @@
 }
 .poke-card{
     width: 200px;
-    height: 200px;
+    height: 250px;
     border: 2px solid red;
     margin: 5px;
     
@@ -32,7 +32,9 @@
     height: 100%;
     margin: 2px;
     display: flex;
-    word-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    
 }
 a{
     width: 100%;
@@ -42,5 +44,10 @@ a{
     justify-content: center;
     text-decoration: none;
     color: yellow;
+    
+}
+.poke-img{
+    width: 90%;
+    height: 80%;
     
 }

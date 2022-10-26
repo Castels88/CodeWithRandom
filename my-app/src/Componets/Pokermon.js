@@ -9,24 +9,17 @@ export function Pokemon() {
   const [img, setImg] = useState([])
 
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/').then((response) => {
-      setValue(response.data.results)
-
-      value.map((item) => {
-        console.log(item.url)
-        axios.get(item.url).then((response) => {
-          img.push(response.data)
-        })
-        console.log(img)
-      })
+    axios.get(`https://pokeapi.co/api/v2/pokemon`).then((res) => {
+      setValue(res.data.results)
+      setImg(res.data.results.map((item) => item.url))
     })
-  }, [img])
+  }, [])
 
   function handleInput(event) {
     setSearch(event.target.value)
   }
   function handleFetch() {
-    console.log(value.map((item) => item.url))
+    console.log(img)
   }
 
   return (
@@ -53,9 +46,9 @@ export function Pokemon() {
             })
             .map((item, index) => (
               <div key={index} className="poke-card">
-                <div className="card-header">{value[index].name}</div>
+                <div className="card-header">{item.name}</div>
                 <div className="poke-info">
-                  {/* {<img src={img[index]} alt="/" />} */}
+                  <img className="poke-img" src="" alt="" />
                 </div>
               </div>
             ))}
