@@ -1,25 +1,23 @@
 /* eslint-disable array-callback-return */
 import '../CSS/Pokemon.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 export function Pokemon() {
-  const [search, setSearch] = useState('')
-  const [value, setValue] = useState([])
-  const [img, setImg] = useState([])
+  const [pokemonName, setPokemonName] = useState('')
+  const [pokemon, setPokemon] = useState([])
 
-  useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon`).then((res) => {
-      setValue(res.data.results)
-      setImg(res.data.results.map((item) => item.url))
-    })
-  }, [])
+  function handleFetch() {
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+      .then((response) => {
+        setPokemon(response.data)
+        console.log(response.data)
+      })
+  }
 
   function handleInput(event) {
-    setSearch(event.target.value)
-  }
-  function handleFetch() {
-    console.log(img)
+    setPokemonName(event.target.value)
   }
 
   return (
@@ -31,27 +29,26 @@ export function Pokemon() {
         id="search"
         placeholder="search your pokemon"
       />
-      <button onClick={handleFetch}>fetch</button>
-      <div className="poke-container-card">
-        {value &&
-          value
-            .filter((item) => {
-              if (setSearch === '') {
-                return item
-              } else if (
-                item.name.toLowerCase().includes(search.toLowerCase())
-              ) {
-                return item
-              }
-            })
-            .map((item, index) => (
-              <div key={index} className="poke-card">
-                <div className="card-header">{item.name}</div>
-                <div className="poke-info">
-                  <img className="poke-img" src="" alt="" />
-                </div>
-              </div>
-            ))}
+      <button className="poke-button" onClick={handleFetch}>
+        Search Pokemon
+      </button>
+      <div className="poke-card">
+        <h3 className="poke-name">{pokemon?.name}</h3>
+        <h4 className="poke-order">Numero: {pokemon?.order}</h4>
+        <h4 className="poke-order">
+          HP: {pokemon.stats && pokemon.stats[0].base_stat}
+          <br />
+          ATK: {pokemon.stats && pokemon.stats[1].base_stat}
+          <br />
+          DEF: {pokemon.stats && pokemon.stats[2].base_stat}
+        </h4>
+        {pokemon.sprites && (
+          <img
+            className="poke-img"
+            src={pokemon.sprites?.front_default}
+            alt="img del pokemon"
+          />
+        )}
       </div>
     </div>
   )

@@ -4,7 +4,8 @@
     height: 100%;
     border: 1px solid black;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    align-items: center;    
 }
 .poke-container-card{
     width: 100%;
@@ -15,7 +16,6 @@
 }
 .poke-card{
     width: 200px;
-    height: 250px;
     border: 2px solid red;
     margin: 5px;
     
@@ -50,4 +50,11 @@ a{
     width: 90%;
     height: 80%;
     
+}
+.poke-button{
+    margin: 5px;
+    width: 100px;
+    border-radius: 15%;
+    border: 1px solid rgb(247,83,38) ;
+    background-color: rgb(32,202,173);
 }
