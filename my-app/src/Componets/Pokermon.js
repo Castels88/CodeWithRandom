@@ -33,22 +33,26 @@ export function Pokemon() {
         Search Pokemon
       </button>
       <div className="poke-card">
-        <h3 className="poke-name">{pokemon?.name}</h3>
-        <h4 className="poke-order">Numero: {pokemon?.order}</h4>
-        <h4 className="poke-order">
-          HP: {pokemon.stats && pokemon.stats[0].base_stat}
-          <br />
-          ATK: {pokemon.stats && pokemon.stats[1].base_stat}
-          <br />
-          DEF: {pokemon.stats && pokemon.stats[2].base_stat}
-        </h4>
-        {pokemon.sprites && (
-          <img
-            className="poke-img"
-            src={pokemon.sprites?.front_default}
-            alt="img del pokemon"
-          />
-        )}
+        <div>
+          <h3 className="poke-name">{pokemon?.name}</h3>
+          <h4 className="poke-order">Numero: {pokemon?.order}</h4>
+          <h4 className="poke-order">
+            HP: {pokemon.stats && pokemon.stats[0].base_stat}
+            <br />
+            ATK: {pokemon.stats && pokemon.stats[1].base_stat}
+            <br />
+            DEF: {pokemon.stats && pokemon.stats[2].base_stat}
+          </h4>
+        </div>
+        <div>
+          {pokemon.sprites && (
+            <img
+              className="poke-img"
+              src={pokemon.sprites?.front_default}
+              alt="img del pokemon"
+            />
+          )}
+        </div>
       </div>
     </div>
   )
