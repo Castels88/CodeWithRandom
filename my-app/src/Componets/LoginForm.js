@@ -30,7 +30,7 @@ export function LoginForm() {
         Submit
       </Button>
       <Button className="back" onClick={handleButton}>
-        <p>Back to Homepage</p>
+        <p>Back</p>
       </Button>
     </Form>
   )

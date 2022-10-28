@@ -1,0 +1,14 @@
+.search{
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 1rem;
+    margin:10px
+}
+button{
+    width: 100px;
+    border-radius: 50px;
+}
+.we-container{
+    margin-top: 20px;
+}
