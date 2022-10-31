@@ -1,4 +1,4 @@
-repository dedicata alla creazioni di diversi esercizi
+Repository dedicata alla creazioni di diversi esercizi
 All' interno di questa repository potrete trovare alcuni esercizi svolti in Ract JS con l' utilizzo di diverse librerie esterne
 
 Sono state utilizzate React Roots e Bootstrap 
