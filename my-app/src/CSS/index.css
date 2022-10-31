@@ -1,26 +1,18 @@
 #root{
   background-color: #FFDEE9;
 background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+width: 100%;
 
 }
 
-.container_body{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  background-color: #FFDEE9;
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+
+@media screen and (min-width: 375px)
+{
+  .nav-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
-nav{
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(196, 43, 35);
-}
-nav a{
-  color:white;
-  text-decoration: none;
 }

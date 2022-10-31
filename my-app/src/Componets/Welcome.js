@@ -1,5 +1,7 @@
 import '../CSS/Welcome.css'
 import { CarouselProject } from './CarouselProject'
+import { Footer } from './Footer'
+
 export function Welcome() {
   return (
     <div className="container d-flex flex-column align-items-center">
@@ -32,6 +34,8 @@ export function Welcome() {
       {/* inizio progetti  */}
       <CarouselProject />
       {/* fine progetti  */}
+      <hr />
+      <Footer />
     </div>
   )
 }

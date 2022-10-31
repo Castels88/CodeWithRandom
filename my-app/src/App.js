@@ -8,11 +8,12 @@ import { WeatherApp } from './Componets/WeatherApp'
 import { Welcome } from './Componets/Welcome'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
+import './CSS/index.css'
 
 export function App() {
   return (
     <div className="container_body">
-      <Navbar bg="light" variant="light">
+      <Navbar className="nav-container" bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">My Exercize app</Navbar.Brand>
           <Nav className="me-auto">

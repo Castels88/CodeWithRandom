@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStopwatch } from 'react-timer-hook'
 import Button from 'react-bootstrap/Button'
+import '../CSS/Watch.css'
 
 export function MyStopwatch() {
   const {
@@ -15,7 +16,7 @@ export function MyStopwatch() {
   } = useStopwatch({ autoStart: true })
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="watch-container" style={{ textAlign: 'center' }}>
       <div style={{ fontSize: '100px' }}>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
         <span>{seconds}</span>
