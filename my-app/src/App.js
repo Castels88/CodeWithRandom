@@ -13,8 +13,8 @@ import './CSS/index.css'
 export function App() {
   return (
     <div className="container_body">
-      <Navbar className="nav-container" bg="light" variant="light">
-        <Container>
+      <Navbar bg="light" variant="light">
+        <div className="nav-container">
           <Navbar.Brand href="#home">My Exercize app</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
@@ -23,7 +23,7 @@ export function App() {
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/weather">Weather App</Nav.Link>
           </Nav>
-        </Container>
+        </div>
       </Navbar>
       <Routes>
         <Route path="/" element={<Welcome />} />

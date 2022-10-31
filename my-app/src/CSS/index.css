@@ -4,15 +4,21 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 width: 100%;
 
 }
+.nav-container{
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  
+}
 
 
-
-@media screen and (min-width: 375px)
+@media screen and (max-width: 375px)
 {
   .nav-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    
   }
 }
