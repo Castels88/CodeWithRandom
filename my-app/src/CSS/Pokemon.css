@@ -8,8 +8,7 @@
     align-items: center;   
     font-family: 'Pokemon Solid', sans-serif; ;
     font-weight: 100;
-    border: 1px solid black;
-    background: rgb(250,148,61);
+    
                                                  
 }
 .poke-container-card{
@@ -29,7 +28,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+   
     
 }
 h3{

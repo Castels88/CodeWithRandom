@@ -5,8 +5,25 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .card{
     margin: 20px;
     max-width: 600px;
+    border-radius: 25px;
+    background: #fcff9e;
+}
+.carousel-card{
+    width: 600px;
+    height: 690px;
+}
+.carousel-title{
+    color: black;
+}
+.carousel-text{
+    color: black;
+}
+.carousel-item{
+    width: 600px;
+    height: 690px;
 }
 .img-project{
-    width: 400px;
-    height: 280px;
+    width: 600px;
+    height: 480px;
+    border-radius: 25px;
 }
