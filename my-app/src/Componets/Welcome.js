@@ -1,43 +1,11 @@
 import '../CSS/Welcome.css'
+import { Project } from '../Project/Project'
+
 export function Welcome() {
-  const projects = [
-    {
-      title: 'React Reserve',
-      subtitle: 'MERN Stack',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?',
-      image: './project-1.gif',
-      link: 'https://reactbootcamp.com',
-    },
-    {
-      title: 'React Tracks',
-      subtitle: 'React and Python',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?',
-      image: './project-2.gif',
-      link: 'https://reedbarger.com',
-    },
-    {
-      title: 'DevChat',
-      subtitle: 'React and Firebase',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?',
-      image: './project-3.gif',
-      link: 'https://jsbootcamp.com',
-    },
-    {
-      title: 'Epic Todo App',
-      subtitle: 'React Hooks',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?',
-      image: './project-4.gif',
-      link: 'https://pythonbootcamp.com',
-    },
-  ]
   return (
-    <div className="container">
+    <div className="container d-flex flex-column align-items-center">
       {/* inizio introduzione */}
-      <div className="container">
+      <div className="container d-flex flex-column align-items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi, I'm Elio .
@@ -68,7 +36,7 @@ export function Welcome() {
       </div>
       {/* fine introduzione */}
       {/* inizio progetti  */}
-      <div className="container"></div>
+      <Project />
     </div>
   )
 }
